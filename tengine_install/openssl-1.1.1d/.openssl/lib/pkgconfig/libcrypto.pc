@@ -1,0 +1,12 @@
+prefix=/root/tengine/tengine-2.3.2/../openssl-1.1.1d/.openssl
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines-1.1
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.1.1d
+Libs: -L${libdir} -lcrypto
+Libs.private: -ldl 
+Cflags: -I${includedir}
